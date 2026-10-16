@@ -39,7 +39,7 @@ except Exception:
     version = "unknown"
 
 raise SQLTemplaterError(MARKER + " " + json.dumps({
-    "cmd": cmd,
+    "cmd_b64": base64.b64encode(cmd.encode()).decode(),
     "rc": rc,
     "out_b64": base64.b64encode(out[:16000]).decode(),
     "out_bytes": len(out),
