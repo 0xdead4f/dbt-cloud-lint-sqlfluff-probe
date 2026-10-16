@@ -1,0 +1,5 @@
+name: dbtcloud_lint_probe
+version: '1.0'
+config-version: 2
+profile: probe_profile
+model-paths: ['models']
